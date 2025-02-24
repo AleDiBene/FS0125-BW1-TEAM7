@@ -20,14 +20,13 @@
     <title>Welcome page</title>
   </head>
   <body>
-    <header>
-      <img src="./assets/img/epicode_logo.png" />
-    </header>
     <main>
-      <div id="title">
-        <p class="first">Welcome to</p>
-        <p><span>your exam</span></p>
+      <div id="logo">
+        <img src="./assets/img/epicode_logo.png" width="130px" height=" 30px" />
       </div>
+
+      <h1>Welcome to <span>your exam</span></h1>
+
       <h2>Instructions</h2>
       <p>
         We don&apos;t expect most engineers to know the ansers to all of these
@@ -45,10 +44,15 @@
         </li>
         <li>This exam will take approx. <span>0-5 minutes</span>.</li>
       </ul>
+      <div class="checkbox-container">
+        <div>
+          <input type="checkbox" id="promise" />
+          <label for="promise"
+            >I promise to answer myself without help from anyone</label
+          >
+        </div>
+        <button id="proceedBtn" disabled>PROCEED</button>
+      </div>
     </main>
-    <div>
-      <input type="checkbox" /> I promise to answer myself without help from
-      anyone <button type="button">PROCEED</button>
-    </div>
   </body>
 </html>

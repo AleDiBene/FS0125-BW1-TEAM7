@@ -3,42 +3,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-
-
 body {
-    background-image: url(../img/bg.jpg); /* Imagine di sfondo*/
-    background-repeat: no-repeat; /* Fa in modo che non si ripeta*/
-    background-position:50% ; /*centra l'imagine nel body*/
-    width: 70%;
-    height: auto;
-    margin:auto; /*centra il contenuto*/
-    
+    background-color: black;
+}
 
+main {
+    background: url(../img/bg.jpg) no-repeat center center/cover; /* Imagine di sfondo*/
+   
+    max-width: 700px;
+    min-height: 600px;
+    margin:auto;
+    padding: 80px;
+    padding-top: 30px;
     }
-  
-     header img{ /*Lavoro sul logo*/
-        width: 150px;
-        height: 50px;
-        padding-top: 40px;
-    }
+ 
+     #logo { /*Lavoro sul logo*/
+      align-items: center;
+        height: auto;
+        margin:auto;
+        background-position: 50%;
+        padding-bottom: 80px ;
+        padding-top: 10px;
+     }
+
+   
     
-     #title p.first{ /*Lavoro sul titolo*/
+     h1{ /*Lavoro sul titolo*/
         font-size: 60px;
         color: white;
         font-family: "Outfit", serif;
         font-weight: 300;
         margin-bottom: 0;
         margin-top: 10px;
+        line-height: 0.8;
       
 
         }
-        #title p span {
+        h1 span { 
         font-family: "Outfit", serif;
         font-weight: 700;
         font-size: 60px ;
         display: block;
         margin-bottom: 1.2rem;
-        word-spacing: -20;
+        padding-bottom: 10px;
        }
 
      h2{ /*sottotitolo*/
@@ -59,26 +66,47 @@ body {
      }
      ul { /*lista*/
         color: white;
-        margin-bottom: 50px;
+        margin-bottom: 80px;
         font-family: "Inter", serif;
         font-weight: 300;
+
      }
-   div { /*checkbox + contenuto*/
-    color: white;
-    font-size: 16px;
-    font-family: "Inter",serif;
-    font-weight: 700;
-   }
-   div button {
-    margin-left: 200px;
-    background-color: #00fff0;
-    font-size: 10pxpx;
-    padding: 20px;
-    padding-left: 30px;
-    padding-right: 20px;
-    text-align: center;
+
+     ul li {
+        line-height: 1.5;
+     }
+   
+   .checkbox-container {
+       font-weight: 700;
+       font-family: "Inter",serif;
+       margin: 20px 0;
+       display: flex;
+       align-items: center;
+       gap: 10px;
+       justify-content: space-between;
+       width: 100%;
+       color: white;
+       font-size: 16px;
+}
+   button {
+    background: #00fff0;
     color: black;
-    }
+    padding: 18px 60px;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+     text-transform: uppercase;
+    box-shadow: 0px 0px 15px #00fff0;
+    transition: 0.3s;
+    position: relative;
+    align-self: flex-end;
+}
+button:hover {
+    background: #00fff0;
+    transform: scale(1.05);
+}
+    
 
    span {
     font-family: "Inter", serif;
