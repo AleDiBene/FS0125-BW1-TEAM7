@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 #logo {
     display: inline-block;
     position: relative;
@@ -12,16 +16,7 @@
     padding: 0;
   }
   
-  #logo p {
-    font-size: 16px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 5px;
-    padding: 0;
-    margin: 17px;
-    margin-left: 45px;
-    position: relative;
-  }
+  
 
   header{
     text-align: left;
@@ -35,9 +30,49 @@ body{
   margin-right: auto;
     text-align: center;
     width: 400px;
+    
     background-image: url(../img/bg.jpg);
     background-repeat: no-repeat;
     background-position: center top;
     
+    background-color: black;
+    
+    
 
+}
+
+#main {
+    text-align: center;
+}
+
+#main h1 {
+    
+    margin-top: 100px;
+    font-family: "Outfit", serif;
+    color: rgb(253, 254, 255);
+    font-size: 50px;
+    white-space: nowrap;
+}
+
+#main p {
+    
+    text-align: center;
+    color: rgb(253, 254, 255);
+    font-size: 25px;
+    font-family: "Outfit", serif;
+    
+    
+    
+    
+}
+
+.primop {
+    white-space: nowrap;
+   margin-left: -96px;
+   margin-top: -20px
+
+}
+
+.secondop{
+    margin-top: -20px;
 }
