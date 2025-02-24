@@ -76,3 +76,13 @@ body{
 .secondop{
     margin-top: -20px;
 }
+
+#formstar {
+    white-space: nowrap;
+    margin-left: -50px;
+    text-align: center;
+}
+
+#formstar input[type="radio"] {
+    display: none;
+  }
