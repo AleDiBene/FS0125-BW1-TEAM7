@@ -1,0 +1,87 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+
+body {
+    background-image: url(../img/bg.jpg); /* Imagine di sfondo*/
+    background-repeat: no-repeat; /* Fa in modo che non si ripeta*/
+    background-position:50% ; /*centra l'imagine nel body*/
+    width: 70%;
+    height: auto;
+    margin:auto; /*centra il contenuto*/
+    
+
+    }
+  
+     header img{ /*Lavoro sul logo*/
+        width: 150px;
+        height: 50px;
+        padding-top: 40px;
+    }
+    
+     #title p.first{ /*Lavoro sul titolo*/
+        font-size: 60px;
+        color: white;
+        font-family: "Outfit", serif;
+        font-weight: 300;
+        margin-bottom: 0;
+        margin-top: 10px;
+      
+
+        }
+        #title p span {
+        font-family: "Outfit", serif;
+        font-weight: 700;
+        font-size: 60px ;
+        display: block;
+        margin-bottom: 1.2rem;
+        word-spacing: -20;
+       }
+
+     h2{ /*sottotitolo*/
+        font-size: 30px;
+        color: #d20094;
+        margin-bottom: 0;
+        font-family: "Outfit", serif;
+        font-weight: 300px;
+        margin-top: 0;
+     }
+     p { /*ogni paragrafo*/
+        color: white;
+        font-size: 16px;
+        margin-top: 0.2rem;
+        margin-bottom: 40px;
+        font-family: "Inter", serif;
+        font-weight: 300;
+     }
+     ul { /*lista*/
+        color: white;
+        margin-bottom: 50px;
+        font-family: "Inter", serif;
+        font-weight: 300;
+     }
+   div { /*checkbox + contenuto*/
+    color: white;
+    font-size: 16px;
+    font-family: "Inter",serif;
+    font-weight: 700;
+   }
+   div button {
+    margin-left: 200px;
+    background-color: #00fff0;
+    font-size: 10pxpx;
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 20px;
+    text-align: center;
+    color: black;
+    }
+
+   span {
+    font-family: "Inter", serif;
+    font-weight: 700;
+    font-size: 16px;
+   }
