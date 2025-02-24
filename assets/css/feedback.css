@@ -58,7 +58,7 @@ body{
     
     text-align: center;
     color: rgb(253, 254, 255);
-    font-size: 25px;
+    font-size: 28px;
     font-family: "Outfit", serif;
     
     
@@ -75,14 +75,26 @@ body{
 
 .secondop{
     margin-top: -20px;
+    margin-left: 95px;
+    white-space: nowrap;
 }
 
 #formstar {
     white-space: nowrap;
-    margin-left: -50px;
-    text-align: center;
+    margin-left: -80px;
+    
 }
 
 #formstar input[type="radio"] {
     display: none;
   }
+
+  #formstar label {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#formstar img {
+    width: 50px;
+}
