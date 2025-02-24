@@ -1,0 +1,43 @@
+#logo {
+    display: inline-block;
+    position: relative;
+  }
+  
+  #logo img {
+    width: 150px;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #logo p {
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    padding: 0;
+    margin: 17px;
+    margin-left: 45px;
+    position: relative;
+  }
+
+  header{
+    text-align: left;
+    margin-left: -200px;
+    margin-top: 28px;
+  }
+
+body{
+    
+    margin-left: auto;
+  margin-right: auto;
+    text-align: center;
+    width: 400px;
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    
+
+}
