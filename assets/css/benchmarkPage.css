@@ -69,6 +69,7 @@ p {
   text-align: center;
   font-size: 16px;
   font-weight: 600;
+  letter-spacing: 2px;
 }
 
 /* Header: posizionamento e padding */
@@ -148,3 +149,5 @@ header img {
   font-size: 0.8em; /* Riduzione della dimensione del testo per i paragrafi */
   color: #900080;
 }
+
+

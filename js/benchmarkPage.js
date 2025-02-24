@@ -98,7 +98,7 @@ let timeLeft = 60;
 const timerElement = document.getElementById("timer");
 const progressRing = document.getElementById("progress-ring");
 
-function updateTimer() {
+const updateTimer = function () {
   if (timeLeft >= 0) {
     timerElement.textContent = timeLeft;
     let progress = (60 - timeLeft) * 6; // 360° diviso 60 secondi
@@ -106,6 +106,32 @@ function updateTimer() {
     timeLeft--;
     setTimeout(updateTimer, 1000);
   }
-}
+};
 
+// Funzione per incrementare il contatore
+const counter = function () {
+  let count = 1; // Inizializza il contatore a 1
+
+  const buttons = document.querySelectorAll("button"); // Seleziona tutti i bottoni
+
+  // Seleziona l'elemento <p> con id "counter"
+  const par = document.getElementById("counter");
+
+  // Mostra il valore iniziale del contatore
+  par.innerText = `QUESTION ${count}/10`;
+
+  // Aggiungi l'event listener a ciascun bottone
+  buttons.forEach((button) => {
+    button.addEventListener("click", function () {
+      count++; // Aumenta il contatore di 1
+      console.log(count); // Mostra il valore del contatore in console
+      par.innerText = `QUESTION ${count}/10`; // Mostra il nuovo valore nel paragrafo
+    });
+  });
+};
+
+// Chiama la funzione counter per attivare il contatore
+counter();
+
+counter();
 updateTimer();

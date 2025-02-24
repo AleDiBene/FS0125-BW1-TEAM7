@@ -22,17 +22,13 @@
         <!-- Anello fisso -->
         <div class="progress-ring" id="progress-ring"></div>
         <!-- Anello che si riempie -->
-        <div class="timer" id="timer">
-          <p>SECONDS</p>
-          60
-          <p>REMAINING</p>
-        </div>
+        <div class="timer" id="timer">60</div>
         <!-- Secondi al centro -->
       </div>
     </header>
 
     <main>
-      <h1 class="outfit">una domanda a caso?</h1>
+      <h1 class="outfit">${questions[0].question}</h1>
 
       <section>
         <button>ciao</button>
@@ -41,7 +37,7 @@
         <button>ciao</button>
       </section>
 
-      <p class="inter">QUESTION /10</p>
+      <p id="counter" class="inter">QUESTION /10</p>
     </main>
     <script src="js/benchmarkPage.js"></script>
   </body>
