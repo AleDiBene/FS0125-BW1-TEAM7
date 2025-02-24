@@ -98,3 +98,14 @@ body{
 #formstar img {
     width: 50px;
 }
+
+.starColorIniziale {
+    color: black;
+    cursor: pointer;
+    font-size: 30px;
+    
+}
+
+.starColorAttivata {
+    color: #00ffff ;
+}
