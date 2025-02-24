@@ -3,13 +3,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+/*Ho riscontrato un piccolo problema con il centarare gli elementi e le misure
+/*queste per il pc portatile vanno bene, l'unica cosa è che se riporto l'index su 
+/* uno schermo più grande, risulta essere troppo piccolo e non si addatta.
+/* Forse sono stupida? probabile, ma ci sto provando da oggi pomeriggio.
+/*HELP ME please :'( :'( :'( */
+
+
 body {
     background-color: black;
 }
 
 main {
     background: url(../img/bg.jpg) no-repeat center center/cover; /* Imagine di sfondo*/
-   
     max-width: 700px;
     min-height: 600px;
     margin:auto;
@@ -64,7 +70,7 @@ main {
         font-family: "Inter", serif;
         font-weight: 300;
      }
-     ul { /*lista*/
+     ul { /*lista ul*/
         color: white;
         margin-bottom: 80px;
         font-family: "Inter", serif;
@@ -72,11 +78,11 @@ main {
 
      }
 
-     ul li {
+     ul li { /*spazio tra le LI*/
         line-height: 1.5;
      }
    
-   .checkbox-container {
+   .checkbox-container { /*Qui c'è la checkbox*/
        font-weight: 700;
        font-family: "Inter",serif;
        margin: 20px 0;
@@ -88,7 +94,7 @@ main {
        color: white;
        font-size: 16px;
 }
-   button {
+   button { /*style del bottone*/
     background: #00fff0;
     color: black;
     padding: 18px 60px;
@@ -102,13 +108,13 @@ main {
     position: relative;
     align-self: flex-end;
 }
-button:hover {
+button:hover { /*illumina il bottone*/
     background: #00fff0;
     transform: scale(1.05);
 }
     
 
-   span {
+   span { /*Questo span, riprende tutti i tag così chiamati nel html e ne modifica sia la font che la weight*/
     font-family: "Inter", serif;
     font-weight: 700;
     font-size: 16px;
