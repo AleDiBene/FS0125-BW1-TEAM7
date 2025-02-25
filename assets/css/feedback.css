@@ -1,0 +1,163 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+#logo {
+    display: inline-block;
+    position: relative;
+  }
+  
+  #logo img {
+    width: 150px;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+
+  header{
+    text-align: left;
+    margin-left: -200px;
+    margin-top: 28px;
+  }
+
+body{
+    
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 400px;
+    
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    
+    background-color: black;
+    
+    
+
+}
+
+#main {
+    text-align: center;
+}
+
+#main h1 {
+    
+    margin-top: 100px;
+    font-family: "Outfit", serif;
+    color: rgb(253, 254, 255);
+    font-size: 50px;
+    white-space: nowrap;
+}
+
+#main p {
+    
+    text-align: center;
+    color: rgb(253, 254, 255);
+    font-size: 28px;
+    font-family: "Outfit", serif;
+    
+    
+    
+    
+}
+
+.primop {
+    white-space: nowrap;
+   margin-left: -96px;
+   margin-top: -20px
+
+}
+
+.secondop{
+    margin-top: -20px;
+    margin-left: 95px;
+    white-space: nowrap;
+}
+
+#formstar {
+    white-space: nowrap;
+    margin-left: -80px;
+    
+}
+
+#formstar input[type="radio"] {
+    display: none;
+  }
+
+  #formstar label {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#formstar img {
+    width: 50px;
+}
+
+
+.starDark {
+    filter: brightness(0); 
+  }
+  
+  
+  .starOriginal {
+    filter: none; 
+  }
+  
+  .star {
+    transition: filter 0.3s ease; 
+  }
+.terzop{
+    white-space: nowrap;
+    margin-left: -105px;
+    margin-top: 55px;
+}
+
+.container {
+    position: relative;
+    text-align: center; 
+  }
+  
+  textarea {
+    border: none;
+    outline: none;
+    background: transparent;
+    resize: none;
+    display: inline-block;
+    width: 200px;
+    height: 20px;
+    padding: 3px;
+    color: black;
+    margin-bottom: 0.5px; 
+    margin-left: -400px;
+    margin-top: 30px;
+  }
+  
+  hr {
+    background-color: rgb(194, 18, 141);
+    border: none;
+    height: 2px;
+    width: 770px;
+    margin: 0; 
+    margin-left: -135px;
+  }
+
+  button{
+    margin-left: 70px;
+    margin-top: 60px;
+    width: 180px;
+    height: 60px;
+    font-size: 20px;
+    background-color: #00FFFF;
+    font-weight: bold;
+    border: none;
+    
+    box-shadow: 0 0 10px #00FFFF, 
+              0 0 20px #00FFFF,
+              0 0 30px #00FFFF;
+  }

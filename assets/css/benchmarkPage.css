@@ -26,6 +26,7 @@ h1 {
   color: white;
   text-align: center;
   font-size: 60px;
+  margin: 8% 0%;
 }
 
 .outfit {
@@ -97,14 +98,17 @@ header img {
 /* Contenitore del timer: posizionamento a destra */
 .timer-container {
   display: inline-block; /* Comportamento in linea */
+
 width: 150px; /* Larghezza del timer */
   height: 150px; /* Altezza del timer */
  position: relative; /* Posizionamento relativo per l'anello e il timer */
+
+  width: 150px; /* Larghezza del timer */
+  height: 150px; /* Altezza del timer */
+  position: relative; /* Posizionamento relativo per l'anello e il timer */
   text-align: center; /* Centra il contenuto del timer */
   float: right; /* Posiziona il timer a destra */
 }
-
-
 
 
 /* Anello di sfondo */
@@ -153,6 +157,4 @@ width: 150px; /* Larghezza del timer */
   font-size: 0.8em; /* Riduzione della dimensione del testo per i paragrafi */
   color: #900080;
 }
-
-
 
