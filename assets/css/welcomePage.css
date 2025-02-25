@@ -1,0 +1,122 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/*Ho riscontrato un piccolo problema con il centarare gli elementi e le misure
+/*queste per il pc portatile vanno bene, l'unica cosa è che se riporto l'index su 
+/* uno schermo più grande, risulta essere troppo piccolo e non si addatta.
+/* Forse sono stupida? probabile, ma ci sto provando da oggi pomeriggio.
+/*HELP ME please :'( :'( :'( */
+
+
+body {
+    background-color: black;
+}
+
+main {
+    background: url(../img/bg.jpg) no-repeat center center/cover; /* Imagine di sfondo*/
+    max-width: 700px;
+    min-height: 600px;
+    margin:auto;
+    padding: 80px;
+    padding-top: 30px;
+    }
+ 
+     #logo { /*Lavoro sul logo*/
+      align-items: center;
+        height: auto;
+        margin:auto;
+        background-position: 50%;
+        padding-bottom: 80px ;
+        padding-top: 10px;
+     }
+
+   
+    
+     h1{ /*Lavoro sul titolo*/
+        font-size: 60px;
+        color: white;
+        font-family: "Outfit", serif;
+        font-weight: 300;
+        margin-bottom: 0;
+        margin-top: 10px;
+        line-height: 0.8;
+     
+      
+
+        }
+        h1 span { 
+        font-family: "Outfit", serif;
+        font-weight: 700;
+        font-size: 60px ;
+        display: block;
+        margin-bottom: 1.2rem;
+        padding-bottom: 10px;
+       }
+
+     h2{ /*sottotitolo*/
+        font-size: 30px;
+        color: #d20094;
+        margin-bottom: 0;
+        font-family: "Outfit", serif;
+        font-weight: 300px;
+        margin-top: 0;
+     }
+     p { /*ogni paragrafo*/
+        color: white;
+        font-size: 16px;
+        margin-top: 0.2rem;
+        margin-bottom: 40px;
+        font-family: "Inter", serif;
+        font-weight: 300;
+     }
+     ul { /*lista ul*/
+        color: white;
+        margin-bottom: 80px;
+        font-family: "Inter", serif;
+        font-weight: 300;
+
+     }
+
+     ul li { /*spazio tra le LI*/
+        line-height: 1.5;
+     }
+   
+   .checkbox-container { /*Qui c'è la checkbox*/
+       font-weight: 700;
+       font-family: "Inter",serif;
+       margin: 20px 0;
+       display: flex;
+       align-items: center;
+       gap: 10px;
+       justify-content: space-between;
+       width: 100%;
+       color: white;
+       font-size: 16px;
+}
+   button { /*style del bottone*/
+    background: #00fff0;
+    color: black;
+    padding: 18px 60px;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+     text-transform: uppercase;
+    box-shadow: 0px 0px 15px #00fff0;
+    transition: 0.3s;
+    position: relative;
+    align-self: flex-end;
+}
+button:hover { /*illumina il bottone*/
+    background: #00fff0;
+    transform: scale(1.05);
+}
+    
+
+   span { /*Questo span, riprende tutti i tag così chiamati nel html e ne modifica sia la font che la weight*/
+    font-family: "Inter", serif;
+    font-weight: 700;
+    font-size: 16px;
+   }
