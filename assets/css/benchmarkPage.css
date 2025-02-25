@@ -1,0 +1,158 @@
+
+body {
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+main {
+  text-align: center;
+  margin: 0 auto;
+  width: 80%;
+}
+img {
+  display: inline-block;
+  width: 250px;
+  margin: 40px;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 60px;
+}
+
+.outfit {
+  font-family: "Outfit", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.inter {
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+section {
+  margin: 0 auto;
+  width: 50%;
+}
+
+button {
+  display: inline-block; /* Per mettere due bottoni nella stessa riga */
+  width: 250px;
+  border-radius: 40px;
+  padding: 28px 80px; /* Ridotto per evitare che i bottoni siano troppo larghi */
+  margin: 10px; /* Distanza tra i bottoni */
+  color: white;
+  background: rgb(144, 0, 128);
+  background: linear-gradient(
+    5deg,
+    rgba(144, 0, 128, 1) 0%,
+    rgba(210, 0, 148, 1) 100%
+  );
+  border: 2px solid white;
+}
+
+p {
+  margin-top: 200px;
+  color: white;
+  font-family: "Inter", serif;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+/* Header: posizionamento e padding */
+header {
+  width: 100%; /* L'header occupa tutta la larghezza disponibile */
+  height: 80px; /* Altezza dell'header */
+  padding: 0 20px; /* Padding a sinistra e destra */
+  box-sizing: border-box; /* Assicura che il padding non influisca sulle dimensioni */
+  display: block; /* Imposta display block per il container */
+}
+
+/* Contenitore del logo: posizionamento a sinistra */
+.logo-container {
+  display: inline-block; /* Imposta inline-block per il logo */
+  vertical-align: middle; /* Allinea verticalmente */
+  width: auto; /* Impedisce che il logo occupi tutta la larghezza */
+}
+
+header img {
+  height: 50px; /* Imposta l'altezza dell'immagine */
+  vertical-align: middle; /* Allinea verticalmente l'immagine */
+}
+
+/* Contenitore del timer: posizionamento a destra */
+.timer-container {
+  display: inline-block; /* Comportamento in linea */
+width: 150px; /* Larghezza del timer */
+  height: 150px; /* Altezza del timer */
+ position: relative; /* Posizionamento relativo per l'anello e il timer */
+  text-align: center; /* Centra il contenuto del timer */
+  float: right; /* Posiziona il timer a destra */
+}
+
+
+
+
+/* Anello di sfondo */
+.ring-background {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #9a6a9e; /* Colore fisso dell'anello */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Anello progressivo */
+.progress-ring {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+    #00ffff 0deg,
+    transparent 90deg
+  ); /* Gradiente per l'anello che si riempie */
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(
+    -90deg
+  ); /* Ruota l'anello per iniziare dalla parte destra */
+  transition: background 0.1s linear;
+}
+
+/* Timer al centro */
+.timer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2em; /* Dimensione del testo */
+  font-weight: bold;
+  color: #900080;
+  text-align: center; /* Centra il testo orizzontalmente */
+}
+
+.timer p {
+  margin: 0;
+  font-size: 0.8em; /* Riduzione della dimensione del testo per i paragrafi */
+  color: #900080;
+}
+
+
+
