@@ -101,11 +101,16 @@ body{
 
 
 .starDark {
-    filter: grayscale(100%) brightness(0.9)contrast(150%);  
+    filter: brightness(0); 
   }
   
-  .starBlue {
-    filter: brightness(1.5) sepia(1) hue-rotate(200deg); 
+  
+  .starOriginal {
+    filter: none; 
+  }
+  
+  .star {
+    transition: filter 0.3s ease; 
   }
 .terzop{
     white-space: nowrap;
@@ -140,4 +145,19 @@ body{
     width: 770px;
     margin: 0; 
     margin-left: -135px;
+  }
+
+  button{
+    margin-left: 70px;
+    margin-top: 60px;
+    width: 180px;
+    height: 60px;
+    font-size: 20px;
+    background-color: #00FFFF;
+    font-weight: bold;
+    border: none;
+    
+    box-shadow: 0 0 10px #00FFFF, 
+              0 0 20px #00FFFF,
+              0 0 30px #00FFFF;
   }
