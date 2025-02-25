@@ -99,13 +99,31 @@ body{
     width: 50px;
 }
 
-.starColorIniziale {
-    color: black;
-    cursor: pointer;
-    font-size: 30px;
-    
+
+.starDark {
+    filter: grayscale(100%) brightness(0.9)contrast(150%);  
+  }
+  
+  .starBlue {
+    filter: brightness(1.5) sepia(1) hue-rotate(200deg); 
+  }
+.terzop{
+    white-space: nowrap;
+    margin-left: -105px;
+    margin-top: 55px;
 }
 
-.starColorAttivata {
-    color: #00ffff ;
+hr{
+    background-color: rgb(194, 18, 141);
+    border: none;
+    height: 2px;
+    width: 770px;
+    margin: 100px;
+    margin-left: -144px;
+}
+
+textarea{
+    border: none;
+    outline: none;
+    background: transparent;
 }
