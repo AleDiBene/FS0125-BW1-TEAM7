@@ -1,12 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/resultPage.css" />
-    <title>Welcome page</title>
-  </head>
-  <body>
-    <script src=""></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exam Results</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #0c0f2d, #69277c);
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      max-width: 600px;
+    }
+    .title {
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .summary {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+    .chart-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .chart {
+      position: relative;
+      width: 250px;
+      height: 250px;
+      margin: 20px;
+    }
+    .chart svg {
+      transform: rotate(-90deg); 
+    }
+    .chart circle {
+      fill: none;
+      stroke-width: 10;
+      stroke-linecap: round;
+      transition: stroke-dashoffset 1s ease-in-out;
+    }
+    .bg {
+      stroke: #d400a5;
+    }
+    .correct {
+      stroke: #00e0ff;
+    }
+    .message-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 140px;
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 12px;
+      font-weight: bold;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+    .score-container {
+      display: flex;
+      justify-content: space-between;
+      width: 500px;
+      margin-top: 10px;
+    }
+    .score {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .score-title {
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+    .button {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+    .button:hover {
+      background: white;
+      color: black;
+    }
+  </style>
+</head>
+<body onload="generateResults(5, 6)">
+  <div class="container">
+    <div class="title">Results</div>
+    <div class="summary">The summary of your answers:</div>
+    <div class="chart-container">
+      <div class="score">
+        <div class="score-title" id="wrong-title">Wrong</div>
+        <div id="wrong-text"></div>
+      </div>
+      <div class="chart">
+        <svg width="250" height="250" viewBox="0 0 100 100">
+          <circle class="bg" cx="50" cy="50" r="40"></circle>
+          <circle id="correct-circle" class="correct" cx="50" cy="50" r="40"></circle>
+        </svg>
+        <div class="message-container" id="result-message"></div>
+      </div>
+      <div class="score">
+        <div class="score-title" id="correct-title">Correct</div>
+        <div id="correct-text"></div>
+      </div>
+    </div>
+    <button class="button">RATE US</button>
+  </div>
+  <script>
+    function generateResults(correctAnswers, totalQuestions) {
+      let correctPercentage = (correctAnswers / totalQuestions) * 100;
+      let wrongPercentage = 100 - correctPercentage;
+      
+      document.getElementById("correct-text").innerText =
+        `Correct: ${correctPercentage.toFixed(1)}% (${correctAnswers}/${totalQuestions} questions)`;
+      document.getElementById("wrong-text").innerText =
+        `Wrong: ${wrongPercentage.toFixed(1)}% (${totalQuestions - correctAnswers}/${totalQuestions} questions)`;
+      let circumference = 2 * Math.PI * 40; 
+      let correctCircle = document.getElementById("correct-circle");
+      correctCircle.style.strokeDasharray = circumference;
+      correctCircle.style.strokeDashoffset = circumference * (1 - correctPercentage / 100);
+      
+      let message = correctPercentage >= 50 ?
+        "Congratulations! You passed the exam.\nWe’ll send you the certificate in a few minutes. Check your email (including promotions / spam folder)." :
+        "Please try again next time";
+      document.getElementById("result-message").innerText = message;
+    }
+  </script>
+</body>
 </html>
