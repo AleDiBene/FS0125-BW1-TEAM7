@@ -25,6 +25,7 @@ h1 {
   color: white;
   text-align: center;
   font-size: 60px;
+  margin: 8% 0%;
 }
 
 .outfit {
@@ -149,5 +150,3 @@ header img {
   font-size: 0.8em; /* Riduzione della dimensione del testo per i paragrafi */
   color: #900080;
 }
-
-

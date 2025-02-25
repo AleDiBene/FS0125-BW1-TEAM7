@@ -93,45 +93,70 @@ const questions = [
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
 ];
-
 let timeLeft = 60;
+let currentQuestionIndex = 0;
+
 const timerElement = document.getElementById("timer");
 const progressRing = document.getElementById("progress-ring");
+const questionDisplay = document.getElementById("questionDisplay");
+const counterDisplay = document.getElementById("counter");
+const nextButtons = document.querySelectorAll(".nextQuestion");
 
 const updateTimer = function () {
-  if (timeLeft >= 0) {
-    timerElement.textContent = timeLeft;
-    let progress = (60 - timeLeft) * 6; // 360° diviso 60 secondi
-    progressRing.style.background = `conic-gradient(#00ffff ${progress}deg, transparent ${progress}deg)`;
-    timeLeft--;
-    setTimeout(updateTimer, 1000);
-  }
+  timeLeft = 60; // Reset del timer ogni volta che il bottone viene cliccato
+  const interval = setInterval(function () {
+    if (timeLeft >= 0) {
+      timerElement.textContent = timeLeft;
+      let progress = (60 - timeLeft) * 6;
+      progressRing.style.background = `conic-gradient(#00ffff ${progress}deg, transparent ${progress}deg)`;
+      timeLeft--;
+    } else {
+      clearInterval(interval);
+    }
+  }, 1000);
 };
 
-// Funzione per incrementare il contatore
 const counter = function () {
-  let count = 1; // Inizializza il contatore a 1
-
-  const buttons = document.querySelectorAll("button"); // Seleziona tutti i bottoni
-
-  // Seleziona l'elemento <p> con id "counter"
-  const par = document.getElementById("counter");
-
-  // Mostra il valore iniziale del contatore
-  par.innerText = `QUESTION ${count}/10`;
-
-  // Aggiungi l'event listener a ciascun bottone
-  buttons.forEach((button) => {
+  let count = 1;
+  counterDisplay.innerText = `QUESTION ${count}/10`;
+  nextButtons.forEach((button) => {
     button.addEventListener("click", function () {
-      count++; // Aumenta il contatore di 1
-      console.log(count); // Mostra il valore del contatore in console
-      par.innerText = `QUESTION ${count}/10`; // Mostra il nuovo valore nel paragrafo
+      count++;
+      counterDisplay.innerText = `QUESTION ${count}/10`;
+      loadQuestion(); // Carica la domanda successiva
+      updateTimer(); // Resetta il timer
     });
   });
 };
 
-// Chiama la funzione counter per attivare il contatore
-counter();
+const loadQuestion = function () {
+  if (currentQuestionIndex < questions.length) {
+    const question = questions[currentQuestionIndex];
+    questionDisplay.innerText = question.question;
 
+    // Imposta i bottoni con le risposte
+    const answers = [question.correct_answer, ...question.incorrect_answers];
+    answers.sort(() => Math.random() - 0.5); // Mischia le risposte
+
+    nextButtons.forEach((button, index) => {
+      button.innerText = answers[index];
+      button.classList.remove("correct", "incorrect");
+      button.onclick = function () {
+        if (button.innerText === question.correct_answer) {
+          button.classList.add("correct");
+        } else {
+          button.classList.add("incorrect");
+        }
+      };
+    });
+
+    currentQuestionIndex++;
+  } else {
+    questionDisplay.innerText = "Hai finito tutte le domande!";
+    nextButtons.forEach((button) => (button.disabled = true));
+  }
+};
+
+loadQuestion();
 counter();
 updateTimer();
