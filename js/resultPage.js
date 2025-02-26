@@ -1,3 +1,5 @@
-import { correct } from "./benchmarkPage.js";
+localStorage.getItem("punteggio");
 
-console.log(correct);
+const punteggio = localStorage.getItem("punteggio");
+
+console.log(punteggio);

@@ -101,8 +101,8 @@ const progressRing = document.getElementById("progress-ring");
 const questionDisplay = document.getElementById("questionDisplay");
 const counterDisplay = document.getElementById("counter");
 const nextButtons = document.querySelectorAll(".nextQuestion");
-const correct = 0; // Tiene traccia delle risposte corrette
-const uncorrect = 0; // Tiene traccia delle risposte errate
+let correct = 0; // Tiene traccia delle risposte corrette
+let uncorrect = 0; // Tiene traccia delle risposte errate
 
 const updateTimer = function () {
   timeLeft = 60; // Reset del timer ogni volta che il bottone viene cliccato
@@ -151,6 +151,8 @@ const loadQuestion = function () {
           uncorrect++;
           console.log("sbagliato");
         }
+        localStorage.setItem("punteggio", correct);
+        localStorage.setItem("sbagliate", uncorrect);
       };
       // Controlla se il giocatore è promosso o bocciato alla fine del quiz
       if (currentQuestionIndex === questions.length - 1) {
@@ -160,7 +162,6 @@ const loadQuestion = function () {
           const B = document.createElement("button");
           B.innerText = "Cliccami";
           par.appendChild(B);
-          createFinalButton();
         } else {
           console.log("Bocciato!");
           questionDisplay.innerText = "Sei stato BOCCIATO! ❌";
