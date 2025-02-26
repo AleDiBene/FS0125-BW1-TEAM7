@@ -2,7 +2,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 10px; 
+  padding: 40px; 
   z-index: 1000; 
 }
 
@@ -13,8 +13,9 @@ header img {
 
 body {
 background-image: url(bg.jpg);
+background-size: cover;
 color: white;
-font-family: Arial, sans-serif;
+font-family: "inter", "serif";
 text-align: center;
 display: flex;
 flex-direction: column;
