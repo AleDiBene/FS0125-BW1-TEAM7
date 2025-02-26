@@ -1,6 +1,7 @@
 
   function generateResults(correctAnswers, totalQuestions) {
-  let correctPercentage = (correctAnswers / totalQuestions) * 100;
+  
+    let correctPercentage = (correctAnswers / totalQuestions) * 100;
   let wrongPercentage = 100 - correctPercentage;
   
   document.getElementById("correct-text").innerText =
