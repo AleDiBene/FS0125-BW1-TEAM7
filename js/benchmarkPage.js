@@ -151,8 +151,8 @@ const loadQuestion = function () {
           uncorrect++;
           console.log("sbagliato");
         }
-        localStorage.setItem("punteggio", correct);
-        localStorage.setItem("sbagliate", uncorrect);
+        localStorage.setItem("punteggio", correct); //export variable
+        localStorage.setItem("errore", uncorrect); //export variable
       };
       // Controlla se il giocatore è promosso o bocciato alla fine del quiz
       if (currentQuestionIndex === questions.length - 1) {

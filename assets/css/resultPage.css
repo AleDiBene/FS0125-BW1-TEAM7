@@ -1,35 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 header {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 40px; 
-  z-index: 1000; 
+  padding: 40px;
+  z-index: 1000;
 }
 
 header img {
-  max-width: 200px; 
+  max-width: 200px;
   height: auto;
 }
 
 body {
-background-image: url(bg.jpg);
-background-size: cover;
-color: white;
-font-family: "inter", "serif";
-text-align: center;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-height: 100vh;
-margin: 0;
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  color: white;
+  font-family: "inter", "serif";
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
 }
 .container {
   max-width: 600px;
 }
 .title {
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 60px;
+  color: white;
+  font-family: "Outfit", serif;
+  font-weight: 300;
+  margin-bottom: 0;
+  margin-top: 10px;
+  line-height: 0.8;
 }
 .summary {
   font-size: 18px;
@@ -47,7 +55,7 @@ margin: 0;
   margin: 20px;
 }
 .chart svg {
-  transform: rotate(-90deg); 
+  transform: rotate(-90deg);
 }
 .chart circle {
   fill: none;
@@ -105,4 +113,42 @@ margin: 0;
 .button:hover {
   background: white;
   color: black;
+}
+
+h1 {
+  /*Lavoro sul titolo*/
+  font-size: 60px;
+  color: white;
+  font-family: "Outfit", serif;
+  font-weight: 300;
+  margin-bottom: 0;
+  margin-top: 10px;
+  line-height: 0.8;
+}
+h1 span {
+  font-family: "Outfit", serif;
+  font-weight: 700;
+  font-size: 60px;
+  display: block;
+  margin-bottom: 1.2rem;
+  padding-bottom: 10px;
+}
+
+h2 {
+  /*sottotitolo*/
+  font-size: 30px;
+  color: #d20094;
+  margin-bottom: 0;
+  font-family: "Outfit", serif;
+  font-weight: 300px;
+  margin-top: 0;
+}
+p {
+  /*ogni paragrafo*/
+  color: white;
+  font-size: 16px;
+  margin-top: 0.2rem;
+  margin-bottom: 40px;
+  font-family: "Inter", serif;
+  font-weight: 300;
 }
