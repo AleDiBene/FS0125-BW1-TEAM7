@@ -101,8 +101,8 @@ const progressRing = document.getElementById("progress-ring");
 const questionDisplay = document.getElementById("questionDisplay");
 const counterDisplay = document.getElementById("counter");
 const nextButtons = document.querySelectorAll(".nextQuestion");
-export const correct = 0; // Tiene traccia delle risposte corrette
-export const uncorrect = 0; // Tiene traccia delle risposte errate
+const correct = 0; // Tiene traccia delle risposte corrette
+const uncorrect = 0; // Tiene traccia delle risposte errate
 
 const updateTimer = function () {
   timeLeft = 60; // Reset del timer ogni volta che il bottone viene cliccato
