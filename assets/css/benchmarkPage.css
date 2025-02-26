@@ -150,3 +150,24 @@ header img {
   font-size: 0.8em; /* Riduzione della dimensione del testo per i paragrafi */
   color: #900080;
 }
+
+.btn {
+  /*style del bottone*/
+  background: #00fff0;
+  color: black;
+  padding: 18px 60px;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0px 0px 15px #00fff0;
+  transition: 0.3s;
+  position: relative;
+  align-self: flex-end;
+}
+.btn:hover {
+  /*illumina il bottone*/
+  background: #00fff0;
+  transform: scale(1.05);
+}
