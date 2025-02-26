@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/resultPage.css" />
-    <title>Welcome page</title>
-  </head>
-  <body>
-    <script type="module" src="js/resultPage.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exam Results</title>
+  <script src="resultPage.js"></script>
+<link rel="stylesheet" href="resultPage.css">
+</head>
+<body onload="generateResults(3, 6)">
+  <header>
+  <img src="epicode_logo.png">
+  </header>
+  <div class="container">
+    <div class="title">Results</div>
+    <div class="summary">The summary of your answers:</div>
+    <div class="chart-container">
+      <div class="score">
+        <div class="score-title" id="wrong-title">Wrong</div>
+        <div id="wrong-text"></div>
+      </div>
+      <div class="chart">
+        <svg width="250" height="250" viewBox="0 0 100 100">
+          <circle class="bg" cx="50" cy="50" r="40"></circle>
+          <circle id="correct-circle" class="correct" cx="50" cy="50" r="40"></circle>
+        </svg>
+        <div class="message-container" id="result-message"></div>
+      </div>
+      <div class="score">
+        <div class="score-title" id="correct-title">Correct</div>
+        <div id="correct-text"></div>
+      </div>
+    </div>
+    <button class="button">RATE US</button>
+  </div>
+
+</body>
 </html>
