@@ -101,6 +101,8 @@ const progressRing = document.getElementById("progress-ring");
 const questionDisplay = document.getElementById("questionDisplay");
 const counterDisplay = document.getElementById("counter");
 const nextButtons = document.querySelectorAll(".nextQuestion");
+let correct = 0; // Tiene traccia delle risposte corrette
+let uncorrect = 0; // Tiene traccia delle risposte errate
 
 const updateTimer = function () {
   timeLeft = 60; // Reset del timer ogni volta che il bottone viene cliccato
@@ -143,11 +145,28 @@ const loadQuestion = function () {
       button.classList.remove("correct", "incorrect");
       button.onclick = function () {
         if (button.innerText === question.correct_answer) {
-          button.classList.add("correct");
+          correct++;
+          console.log("corretto");
         } else {
-          button.classList.add("incorrect");
+          uncorrect++;
+          console.log("sbagliato");
         }
       };
+      // Controlla se il giocatore è promosso o bocciato alla fine del quiz
+      if (currentQuestionIndex === questions.length - 1) {
+        if (correct > 5) {
+          console.log("Promosso!");
+          const par = document.querySelector("p"); // Seleziona il primo <p>
+          const B = document.createElement("button");
+          B.innerText = "Cliccami";
+          par.appendChild(B);
+          createFinalButton();
+        } else {
+          console.log("Bocciato!");
+          questionDisplay.innerText = "Sei stato BOCCIATO! ❌";
+        }
+        nextButtons.forEach((button) => (button.disabled = true));
+      }
     });
 
     currentQuestionIndex++;
@@ -157,6 +176,20 @@ const loadQuestion = function () {
   }
 };
 
+const butttonNext = function () {
+  if (currentQuestionIndex === questions.length - 1) {
+    if (correct > 5) {
+      const par = document.querySelector("p"); // Seleziona solo il primo <p>
+      const B = document.createElement("button");
+      B.classList.add("btn");
+      B.innerText = "Risultati";
+
+      par.appendChild(B); // ✅ Funziona correttamente
+    }
+  }
+};
+
+butttonNext();
 loadQuestion();
 counter();
 updateTimer();
