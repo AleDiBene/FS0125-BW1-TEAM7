@@ -101,8 +101,8 @@ const progressRing = document.getElementById("progress-ring");
 const questionDisplay = document.getElementById("questionDisplay");
 const counterDisplay = document.getElementById("counter");
 const nextButtons = document.querySelectorAll(".nextQuestion");
-let correct = 0; // Tiene traccia delle risposte corrette
-let uncorrect = 0; // Tiene traccia delle risposte errate
+export let correct = 0; // Tiene traccia delle risposte corrette
+export let uncorrect = 0; // Tiene traccia delle risposte errate
 
 const updateTimer = function () {
   timeLeft = 60; // Reset del timer ogni volta che il bottone viene cliccato
@@ -117,9 +117,8 @@ const updateTimer = function () {
     }
   }, 1000);
 };
-
+let count = 1;
 const counter = function () {
-  let count = 1;
   counterDisplay.innerText = `QUESTION ${count}/10`;
   nextButtons.forEach((button) => {
     button.addEventListener("click", function () {
@@ -127,6 +126,7 @@ const counter = function () {
       counterDisplay.innerText = `QUESTION ${count}/10`;
       loadQuestion(); // Carica la domanda successiva
       updateTimer(); // Resetta il timer
+      butttonNext();
     });
   });
 };
@@ -177,14 +177,21 @@ const loadQuestion = function () {
 };
 
 const butttonNext = function () {
-  if (currentQuestionIndex === questions.length - 1) {
-    if (correct > 5) {
-      const par = document.querySelector("p"); // Seleziona solo il primo <p>
+  if (count === 10) {
+    const par = document.querySelector("p"); // Seleziona il primo <p>
+
+    if (!document.querySelector(".btn")) {
       const B = document.createElement("button");
       B.classList.add("btn");
-      B.innerText = "Risultati";
 
-      par.appendChild(B); // ✅ Funziona correttamente
+      const link = document.createElement("a");
+      link.href = "resultPage.html"; // ✅ Collegamento corretto a una pagina HTML
+      link.innerText = "Risultati"; // Il testo va dentro <a>
+      link.style.textDecoration = "none";
+      link.style.color = "inherit";
+
+      B.appendChild(link);
+      par.appendChild(B);
     }
   }
 };

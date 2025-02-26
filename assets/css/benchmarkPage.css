@@ -48,6 +48,7 @@ section {
 }
 
 button {
+  cursor: pointer;
   display: inline-block; /* Per mettere due bottoni nella stessa riga */
   width: 250px;
   border-radius: 40px;
@@ -101,7 +102,6 @@ header img {
   width: 150px; /* Larghezza del timer */
   height: 150px; /* Altezza del timer */
   position: relative; /* Posizionamento relativo per l'anello e il timer */
-
   width: 150px; /* Larghezza del timer */
   height: 150px; /* Altezza del timer */
   position: relative; /* Posizionamento relativo per l'anello e il timer */
@@ -172,6 +172,12 @@ header img {
   align-self: flex-end;
 }
 .btn:hover {
+  /*illumina il bottone*/
+  background: #00fff0;
+  transform: scale(1.05);
+}
+
+.button:hover {
   /*illumina il bottone*/
   background: #00fff0;
   transform: scale(1.05);
