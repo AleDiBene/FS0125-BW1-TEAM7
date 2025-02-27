@@ -5,48 +5,42 @@
 #logo {
     display: inline-block;
     position: relative;
-  }
-  
-  #logo img {
+    width: 100%; /* La larghezza si adatta alla pagina */
+}
+
+#logo img {
     width: 150px;
-    position: absolute; 
+    position: absolute;
     top: 0;
     left: 0;
     margin: 0;
     padding: 0;
-  }
-  
-  
+}
 
-  header{
+header {
     text-align: left;
-    margin-left: -200px;
+    margin-left: 0;
     margin-top: 28px;
-  }
+}
 
-body{
-    
-    margin-left: auto;
-    margin-right: auto;
+body {
+    margin: 0;
+    padding: 0;
     text-align: center;
-    width: 400px;
-    
+    width: 100%; 
     background-image: url(../img/bg.jpg);
     background-repeat: no-repeat;
     background-position: center top;
-    
+    background-size: cover; 
     background-color: black;
-    
-    
-
 }
 
 #main {
     text-align: center;
+    width: 100%;
 }
 
 #main h1 {
-    
     margin-top: 100px;
     font-family: "Outfit", serif;
     color: rgb(253, 254, 255);
@@ -55,41 +49,34 @@ body{
 }
 
 #main p {
-    
     text-align: center;
     color: rgb(253, 254, 255);
     font-size: 28px;
     font-family: "Outfit", serif;
-    
-    
-    
-    
 }
 
 .primop {
     white-space: nowrap;
-   margin-left: -96px;
-   margin-top: -20px
-
+    margin-left: -40px;
+    margin-top: -20px;
 }
 
-.secondop{
+.secondop {
     margin-top: -20px;
-    margin-left: 95px;
+    margin-left: 10px;
     white-space: nowrap;
 }
 
 #formstar {
     white-space: nowrap;
-    margin-left: -80px;
-    
+    margin-left: -30px;
 }
 
 #formstar input[type="radio"] {
     display: none;
-  }
+}
 
-  #formstar label {
+#formstar label {
     display: inline-block;
     cursor: pointer;
     margin-right: 10px;
@@ -99,55 +86,54 @@ body{
     width: 50px;
 }
 
-
 .starDark {
     filter: brightness(0); 
-  }
-  
-  
-  .starOriginal {
+}
+
+.starOriginal {
     filter: none; 
-  }
-  
-  .star {
+}
+
+.star {
     transition: filter 0.3s ease; 
-  }
-.terzop{
+}
+
+.terzop {
     white-space: nowrap;
-    margin-left: -105px;
+    margin-left: -40px;
     margin-top: 55px;
 }
 
 .container {
     position: relative;
-    text-align: center; 
-  }
-  
-  textarea {
+    text-align: center;
+    width: 100%; 
+}
+
+textarea {
     border: none;
     outline: none;
     background: transparent;
     resize: none;
     display: inline-block;
-    width: 200px;
+    width: 100%; 
     height: 20px;
     padding: 3px;
     color: black;
-    margin-bottom: 0.5px; 
-    margin-left: -400px;
+    margin-bottom: 0.5px;
+    margin-left: 0; 
     margin-top: 30px;
-  }
-  
-  hr {
+}
+
+hr {
     background-color: rgb(194, 18, 141);
     border: none;
     height: 2px;
-    width: 770px;
-    margin: 0; 
-    margin-left: -135px;
-  }
+    width: 100%; 
+    margin: 0;
+}
 
-  button{
+button {
     margin-left: 70px;
     margin-top: 60px;
     width: 180px;
@@ -156,8 +142,7 @@ body{
     background-color: #00FFFF;
     font-weight: bold;
     border: none;
-    
     box-shadow: 0 0 10px #00FFFF, 
-              0 0 20px #00FFFF,
-              0 0 30px #00FFFF;
-  }
+                0 0 20px #00FFFF,
+                0 0 30px #00FFFF;
+}
