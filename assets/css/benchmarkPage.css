@@ -98,7 +98,6 @@ header img {
 /* Contenitore del timer: posizionamento a destra */
 .timer-container {
   display: inline-block; /* Comportamento in linea */
-
   width: 150px; /* Larghezza del timer */
   height: 150px; /* Altezza del timer */
   position: relative; /* Posizionamento relativo per l'anello e il timer */
