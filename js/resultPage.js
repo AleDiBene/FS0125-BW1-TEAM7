@@ -2,7 +2,7 @@ function generateResults(correctAnswers, totalQuestions) {
   let correctPercentage = (correctAnswers / totalQuestions) * 100;
   let wrongPercentage = 100 - correctPercentage;
 
-  let punteggio = localStorage.getItem("punteggio");
+  let punteggio = localStorage.getItem("punteggio"); 
   let errore = localStorage.getItem("errore");
 
   document.getElementById(
