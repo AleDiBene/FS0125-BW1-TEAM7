@@ -13,7 +13,7 @@ const fStars = function () {
 
       for (let j = 0; j <= i; j++) {
         allStars[j].querySelector("img").classList.add("starOriginal") //riaggiungo il colore dell'immagine
-        allStars[j].querySelector("img").classList.remove("starDark") //rimuovo il colore nero
+        allStars[j].querySelector("img").classList.remove("starDark") //rimuovo il colore nero!
       }
     })
   }
