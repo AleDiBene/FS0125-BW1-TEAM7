@@ -7,40 +7,42 @@
 
     <link rel="stylesheet" href="assets/css/resultPage.css" />
   </head>
-  <body onload="generateResults(parseInt(localStorage.getItem('punteggio')) || 0, 10)">
+  <body
+    onload="generateResults(parseInt(localStorage.getItem('punteggio')) || 0, 10)"
+  >
     <header>
       <img src="assets/img/epicode_logo.png" />
     </header>
     <main>
-    <div class="container">
-      <div class="title">Results</div>
-      <div class="summary">The summary of your answers:</div>
-      <div class="chart-container">
-        <div class="score">
-          <div class="score-title" id="wrong-title">Wrong</div>
-          <div id="wrong-text"></div>
+      <div class="container">
+        <div class="title">Results</div>
+        <div class="summary">The summary of your answers:</div>
+        <div class="chart-container">
+          <div class="score">
+            <div class="score-title" id="wrong-title">Wrong</div>
+            <div id="wrong-text"></div>
+          </div>
+          <div class="chart">
+            <svg width="250" height="250" viewBox="0 0 100 100">
+              <circle class="bg" cx="50" cy="50" r="40"></circle>
+              <circle
+                id="correct-circle"
+                class="correct"
+                cx="50"
+                cy="50"
+                r="40"
+              ></circle>
+            </svg>
+            <div class="message-container" id="result-message"></div>
+          </div>
+          <div class="score">
+            <div class="score-title" id="correct-title">Correct</div>
+            <div id="correct-text"></div>
+          </div>
         </div>
-        <div class="chart">
-          <svg width="250" height="250" viewBox="0 0 100 100">
-            <circle class="bg" cx="50" cy="50" r="40"></circle>
-            <circle
-              id="correct-circle"
-              class="correct"
-              cx="50"
-              cy="50"
-              r="40"
-            ></circle>
-          </svg>
-          <div class="message-container" id="result-message"></div>
-        </div>
-        <div class="score">
-          <div class="score-title" id="correct-title">Correct</div>
-          <div id="correct-text"></div>
-        </div>
+        <button class="button"><a href="feedback.html">RATE US </a></button>
       </div>
-      <button class="button"><a href="feedback.html"></a> RATE US </button>
-    </div>
-    <script src="js/resultPage.js"></script>
-  </main>
+      <script src="js/resultPage.js"></script>
+    </main>
   </body>
 </html>
