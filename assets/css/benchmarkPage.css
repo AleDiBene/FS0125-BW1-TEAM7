@@ -49,6 +49,7 @@ section {
 }
 
 button {
+  cursor: pointer;
   display: inline-block; /* Per mettere due bottoni nella stessa riga */
   width: 250px;
   border-radius: 40px;
@@ -95,49 +96,89 @@ header img {
   vertical-align: middle; /* Allinea verticalmente l'immagine */
 }
 
-.countdown {
-  width: 150px;
-  height: 150px;
-  position:fixed;
-  top: 20px;
-  right: 20px;
-  border-radius: 50%;
-  border: 20px solid #858282;
-  display: flex;
-justify-items: center;
-align-items: center;
-box-shadow: 0 0 10px  rgba(0, 0, 0, 0.1)
+/* Contenitore del timer: posizionamento a destra */
+.timer-container {
+  display: inline-block; /* Comportamento in linea */
+  width: 150px; /* Larghezza del timer */
+  height: 150px; /* Altezza del timer */
+  position: relative; /* Posizionamento relativo per l'anello e il timer */
+  width: 150px; /* Larghezza del timer */
+  height: 150px; /* Altezza del timer */
+  position: relative; /* Posizionamento relativo per l'anello e il timer */
+  text-align: center; /* Centra il contenuto del timer */
+  float: right; /* Posiziona il timer a destra */
 }
 
-.time {
-font-size: 40px;
-font-weight: bold;
-text-align: center;
-color: #bbb4b4;
-
-
-}
-
-.progress {
-  display: flex;
-  position: absolute;
-  justify-items: center;
+/* Anello di sfondo */
+.ring-background {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  align-items: center;
- 
-  border: 20px solid transparent;
-  border-top: 20px solid #d20094 ;
-  animation: progress-animation 60s linear infinite;
-  background: conic-gradient(#d20094  0% );
+  background: #9a6a9e; /* Colore fisso dell'anello */
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-@keyframes progress-animation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+/* Anello progressivo */
+.progress-ring {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+    #00ffff 0deg,
+    transparent 90deg
+  ); /* Gradiente per l'anello che si riempie */
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(
+    -90deg
+  ); /* Ruota l'anello per iniziare dalla parte destra */
+  transition: background 0.1s linear;
+}
+
+/* Timer al centro */
+.timer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2em; /* Dimensione del testo */
+  font-weight: bold;
+  color: #900080;
+  text-align: center; /* Centra il testo orizzontalmente */
+}
+
+.timer p {
+  margin: 0;
+  font-size: 0.8em; /* Riduzione della dimensione del testo per i paragrafi */
+  color: #900080;
+}
+
+.btn {
+  /*style del bottone*/
+  background: #00fff0;
+  color: black;
+  padding: 18px 60px;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0px 0px 15px #00fff0;
+  transition: 0.3s;
+  position: relative;
+  align-self: flex-end;
+}
+.btn:hover {
+  /*illumina il bottone*/
+  background: #00fff0;
+  transform: scale(1.05);
+}
+
+.button:hover {
+  /*illumina il bottone*/
+  background: #00fff0;
+  transform: scale(1.05);
 }
