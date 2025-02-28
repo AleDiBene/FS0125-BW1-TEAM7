@@ -93,20 +93,25 @@ const questions = [
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
 ];
+
 let timeLeft = 60;
+let interval; // Variabile globale per l'interval
 let currentQuestionIndex = 0;
+let count = 1;
+let correct = 0;
+let uncorrect = 0;
 
 const timerElement = document.getElementById("timer");
 const progressRing = document.getElementById("progress-ring");
 const questionDisplay = document.getElementById("questionDisplay");
 const counterDisplay = document.getElementById("counter");
 const nextButtons = document.querySelectorAll(".nextQuestion");
-let correct = 0; // Tiene traccia delle risposte corrette
-let uncorrect = 0; // Tiene traccia delle risposte errate
 
 const updateTimer = function () {
-  timeLeft = 60; // Reset del timer ogni volta che il bottone viene cliccato
-  const interval = setInterval(function () {
+  clearInterval(interval); // Ferma il timer precedente se esiste
+  timeLeft = 60;
+
+  interval = setInterval(function () {
     if (timeLeft >= 0) {
       timerElement.textContent = timeLeft;
       let progress = (60 - timeLeft) * 6;
@@ -117,15 +122,15 @@ const updateTimer = function () {
     }
   }, 1000);
 };
-let count = 1;
+
 const counter = function () {
   counterDisplay.innerText = `QUESTION ${count}/10`;
   nextButtons.forEach((button) => {
     button.addEventListener("click", function () {
       count++;
       counterDisplay.innerText = `QUESTION ${count}/10`;
-      loadQuestion(); // Carica la domanda successiva
-      updateTimer(); // Resetta il timer
+      loadQuestion();
+      updateTimer(); // Reset del timer
       butttonNext();
     });
   });
@@ -151,14 +156,13 @@ const loadQuestion = function () {
           uncorrect++;
           console.log("sbagliato");
         }
-        localStorage.setItem("punteggio", correct); //export variable
-        localStorage.setItem("errore", uncorrect); //export variable
+        localStorage.setItem("punteggio", correct);
+        localStorage.setItem("errore", uncorrect);
       };
-      // Controlla se il giocatore è promosso o bocciato alla fine del quiz
       if (currentQuestionIndex === questions.length - 1) {
         if (correct > 5) {
           console.log("Promosso!");
-          const par = document.querySelector("p"); // Seleziona il primo <p>
+          const par = document.querySelector("p");
           const B = document.createElement("button");
           B.innerText = "Cliccami";
           par.appendChild(B);
@@ -179,15 +183,15 @@ const loadQuestion = function () {
 
 const butttonNext = function () {
   if (count === 10) {
-    const par = document.querySelector("p"); // Seleziona il primo <p>
+    const par = document.querySelector("p");
 
     if (!document.querySelector(".btn")) {
       const B = document.createElement("button");
       B.classList.add("btn");
 
       const link = document.createElement("a");
-      link.href = "resultPage.html"; // ✅ Collegamento corretto a una pagina HTML
-      link.innerText = "Risultati"; // Il testo va dentro <a>
+      link.href = "resultPage.html";
+      link.innerText = "Risultati";
       link.style.textDecoration = "none";
       link.style.color = "inherit";
 
