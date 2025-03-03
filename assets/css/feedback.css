@@ -141,3 +141,12 @@ button {
   border: none;
   box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
 }
+
+a {
+  text-decoration: none; /* Rimuove la sottolineatura */
+  color: white; /* Mantiene il colore del link (opzionale) */
+}
+
+a:hover {
+  color: rgb(0, 0, 0); /* Cambia colore al passaggio del mouse (opzionale) */
+}
